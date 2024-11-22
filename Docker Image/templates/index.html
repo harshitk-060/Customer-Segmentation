@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mall Customer Segmentation</title>
+</head>
+<body>
+    <h1>Mall Customer Segmentation using Kmeans Clustering</h1>
+    <form action="/predict" method="post">
+
+        <label for="Income">Annual Income (k$):</label>
+        <input type="text" id="Income" name="Annual Income (k$)"><br><br>
+
+        <label for="SpendingScore">Spending Score (1-100):</label>
+        <input type="text" id="SpendingScore" name="Spending Score (1-100)"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>Predicted Cluster: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
